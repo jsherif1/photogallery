@@ -1,49 +1,61 @@
-html{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
     background-color: black;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
+    width: 1000px;
 }
 
-h1{
+#holder {
+    background-color: white;
+    width: 155%;
+}
+
+#holder h1 {
     font-size: 40px;
     color: #007d7b;
     background-color: white;
     text-transform: uppercase;
     float: left;
-    padding-right: 620px;
+    padding-right: 40%;
 }
-nav{
+
+nav {
     height: 100px;
 }
 
-nav h2{
+nav h2 {
     visibility: hidden;
     height: 0;
 }
 
-nav li{
-    position: relative;
-    top: -30px;
-    margin: 0%;
-    padding: 0%;
-}
-
-nav a {
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    margin: 20px;
+nav li {
     float: right;
 }
 
-nav a:hover{
+nav a {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px;
+}
+
+nav a:hover {
     color: #007d7b;
 }
-[href="#Top"]{
+
+[href="#Top"] {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -53,26 +65,280 @@ nav a:hover{
     margin: 0;
     padding: 0 5px;
 }
-[herf="#Top"]:hover{
+
+[herf="#Top"]:hover {
     color: black;
     background-color: white;
 }
 
-main{
+main {
     background-color: white;
-    clear: left;
+    /**
+        clear: left;
+    */
 }
 
-@media screen and  (min-width: 485px) {
-
+.gallery section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
 }
 
-@media screen and  (min-width: 880px) {
-    
+img+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-@media screen and (min-width: 1300px) {
-    body{
-        width: 1000px;
+.about {
+    text-align: left;
+}
+
+.about h2 {
+    text-align: center;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.about p {
+    font-size: 20px;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.glallery p {
+    font-size: 20px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.about,
+.glallery {
+    background-color: white;
+}
+
+figure {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+[alt~="Iran"],
+[alt~="Ireland"],
+[alt~="Italy"] {
+    height: 630px;
+}
+
+figcaption {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+[alt~="Chile"]+figcaption {
+    position: relative;
+    bottom: 24px;
+    left: 50px;
+    color: black;
+}
+
+[alt~="Guatemala"]+figcaption {
+    position: relative;
+    bottom: 24px;
+    left: 34px;
+    color: black;
+}
+
+[alt~="USA"]+figcaption {
+    position: relative;
+    bottom: 22px;
+    left: 66px;
+    color: white;
+}
+
+[alt~="Wyoming"]+figcaption {
+    position: relative;
+    bottom: 22px;
+    left: 42px;
+    color: white;
+}
+
+[alt~="Hawaii"]+figcaption {
+    position: relative;
+    bottom: 24px;
+    left: 50px;
+    color: white;
+}
+
+[alt~="Iran"]+figcaption {
+    position: relative;
+    bottom: 310px;
+    left: 58px;
+    color: black;
+}
+
+[alt~="Ireland"]+figcaption {
+    position: relative;
+    bottom: 310px;
+    left: 58px;
+    color: black;
+}
+
+[alt~="Italy"]+figcaption {
+    position: relative;
+    bottom: 310px;
+    left: 58px;
+    color: black;
+}
+
+[alt~="Moab"]+figcaption {
+    position: relative;
+    bottom: 25px;
+    left: 28px;
+    color: white;
+}
+
+[alt~="Rocky"]+figcaption {
+    position: relative;
+    bottom: 140px;
+    left: 5px;
+    color: black;
+}
+
+[alt~="Switzerland"]+figcaption {
+    position: relative;
+    bottom: 137px;
+    left: 22px;
+    color: white;
+}
+
+[alt~="UK"]+figcaption {
+    position: relative;
+    bottom: 24px;
+    left: 72px;
+    color: white;
+}
+
+.contact {
+    background-color: black;
+}
+
+.contact h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+.contact p {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+label{
+    font-size: 18px;
+    color: white;
+}
+
+input[type="text"], input[type="email"]{
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin: 8px 0;
+}
+
+input::placeholder{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #007d7b;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: white;
+    background-color: #007d7b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    color: white;
+}
+
+@media screen and (min-width: 485px) {
+    body {
+        width: 400px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    #holder h1 {
+        font-size: 40px;
+        color: #007d7b;
+        background-color: white;
+        text-transform: uppercase;
+        padding-right: 4%;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        display: inline-block;
     }
 }
+
+@media screen and (min-width: 880px) {
+    body {
+        width: 650px;
+    }
+
+    .gallery figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    #holder {
+        width: 105%;
+    }
+
+    #holder h1 {
+        font-size: 40px;
+        color: #007d7b;
+        background-color: white;
+        text-transform: uppercase;
+        padding-right: 40%;
+    }
+
+    nav ul{
+        display: block;
+    }
+}
+

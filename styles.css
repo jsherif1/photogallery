@@ -55,6 +55,18 @@ nav a:hover {
     color: #007d7b;
 }
 
+.about p{
+    padding: 10px;
+}
+
+.gallery p{
+    padding: 10px;
+}
+
+.gallery h2{
+    text-align: center;
+}
+
 [href="#Top"] {
     position: fixed;
     bottom: 0;
@@ -78,10 +90,15 @@ main {
     */
 }
 
-.gallery section{
+.gallery div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5px;
+}
+
+figure img {
+    width: 100%;
+    object-fit: cover;
 }
 
 img+h2 {
@@ -296,6 +313,13 @@ footer{
     img {
         width: 100%;
         height: auto;
+        object-fit: cover;
+    }
+
+    .gallery div{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 5px;
     }
 
     #holder h1 {
@@ -320,9 +344,16 @@ footer{
         width: 650px;
     }
 
+    .gallery div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+    }
+
     .gallery figure img {
         width: 100%;
         height: auto;
+        object-fit: cover;
     }
 
     #holder {
@@ -342,3 +373,10 @@ footer{
     }
 }
 
+@media screen and (min-width:1300px){
+    .gallery div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 5px;
+    }
+}
